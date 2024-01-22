@@ -1,0 +1,711 @@
+
+[
+	{
+		"id": 1,
+		"name": "Sanguchitos de Lunch",
+		"description": "Caja de 24 unidades de sanguchitos de lunch, tamaño tipo chip.\n",
+		"price": 3,
+		"image": "https://i.ibb.co/8sfmPMs/sanguchito-1.webp",
+		"createdAt": "2023-12-28T15:50:23.000Z",
+		"updatedAt": "2023-12-28T15:50:23.000Z",
+		"CategoryId": 2,
+		"SubCategoryProducts": [
+			{
+				"id": 1,
+				"ProductId": 1,
+				"SubCategoryId": 1,
+				"createdAt": "2023-12-28T15:50:24.000Z",
+				"updatedAt": "2023-12-28T15:50:24.000Z",
+				"SubCategory": {
+					"id": 1,
+					"date": "jamon y queso",
+					"price": 3,
+					"createdAt": "2023-12-28T15:50:24.000Z",
+					"updatedAt": "2023-12-28T15:50:24.000Z"
+				}
+			},
+			{
+				"id": 2,
+				"ProductId": 1,
+				"SubCategoryId": 2,
+				"createdAt": "2023-12-28T15:50:25.000Z",
+				"updatedAt": "2023-12-28T15:50:25.000Z",
+				"SubCategory": {
+					"id": 2,
+					"date": "salame y queso",
+					"price": 4,
+					"createdAt": "2023-12-28T15:50:25.000Z",
+					"updatedAt": "2023-12-28T15:50:25.000Z"
+				}
+			},
+			{
+				"id": 3,
+				"ProductId": 1,
+				"SubCategoryId": 3,
+				"createdAt": "2023-12-28T15:50:25.000Z",
+				"updatedAt": "2023-12-28T15:50:25.000Z",
+				"SubCategory": {
+					"id": 3,
+					"date": "lomito, queso y tomate",
+					"price": 4,
+					"createdAt": "2023-12-28T15:50:25.000Z",
+					"updatedAt": "2023-12-28T15:50:25.000Z"
+				}
+			},
+			{
+				"id": 4,
+				"ProductId": 1,
+				"SubCategoryId": 4,
+				"createdAt": "2023-12-28T15:50:26.000Z",
+				"updatedAt": "2023-12-28T15:50:26.000Z",
+				"SubCategory": {
+					"id": 4,
+					"date": "Pollo a la mostaza",
+					"price": 5,
+					"createdAt": "2023-12-28T15:50:26.000Z",
+					"updatedAt": "2023-12-28T15:50:26.000Z"
+				}
+			},
+			{
+				"id": 5,
+				"ProductId": 1,
+				"SubCategoryId": 5,
+				"createdAt": "2023-12-28T15:50:27.000Z",
+				"updatedAt": "2023-12-28T15:50:27.000Z",
+				"SubCategory": {
+					"id": 5,
+					"date": "Cerdo desmechado",
+					"price": 5,
+					"createdAt": "2023-12-28T15:50:26.000Z",
+					"updatedAt": "2023-12-28T15:50:26.000Z"
+				}
+			},
+			{
+				"id": 6,
+				"ProductId": 1,
+				"SubCategoryId": 6,
+				"createdAt": "2023-12-28T15:50:27.000Z",
+				"updatedAt": "2023-12-28T15:50:27.000Z",
+				"SubCategory": {
+					"id": 6,
+					"date": "Rucula, queso y tomate",
+					"price": 4,
+					"createdAt": "2023-12-28T15:50:27.000Z",
+					"updatedAt": "2023-12-28T15:50:27.000Z"
+				}
+			},
+			{
+				"id": 7,
+				"ProductId": 1,
+				"SubCategoryId": 7,
+				"createdAt": "2023-12-28T15:50:27.000Z",
+				"updatedAt": "2023-12-28T15:50:27.000Z",
+				"SubCategory": {
+					"id": 7,
+					"date": "Bife a la criolla",
+					"price": 5,
+					"createdAt": "2023-12-28T15:50:27.000Z",
+					"updatedAt": "2023-12-28T15:50:27.000Z"
+				}
+			}
+		],
+		"Category": {
+			"id": 2,
+			"name": "Lunch",
+			"image": "https://i.ibb.co/bKCkFcT/4.png",
+			"createdAt": "2023-12-28T15:50:22.000Z",
+			"updatedAt": "2023-12-28T15:50:22.000Z"
+		},
+		"ImagesProductAsocciations": [
+			{
+				"id": 1,
+				"ProductId": 1,
+				"ImageProductId": 1,
+				"createdAt": "2023-12-28T15:50:28.000Z",
+				"updatedAt": "2023-12-28T15:50:28.000Z",
+				"ImageProduct": {
+					"id": 1,
+					"image": "https://i.ibb.co/8sfmPMs/sanguchito-1.webp",
+					"createdAt": "2023-12-28T15:50:28.000Z",
+					"updatedAt": "2023-12-28T15:50:28.000Z"
+				}
+			},
+			{
+				"id": 2,
+				"ProductId": 1,
+				"ImageProductId": 2,
+				"createdAt": "2023-12-28T15:50:29.000Z",
+				"updatedAt": "2023-12-28T15:50:29.000Z",
+				"ImageProduct": {
+					"id": 2,
+					"image": "https://i.ibb.co/LRd7vqb/sanguchito-3.webp",
+					"createdAt": "2023-12-28T15:50:28.000Z",
+					"updatedAt": "2023-12-28T15:50:28.000Z"
+				}
+			},
+			{
+				"id": 3,
+				"ProductId": 1,
+				"ImageProductId": 3,
+				"createdAt": "2023-12-28T15:50:29.000Z",
+				"updatedAt": "2023-12-28T15:50:29.000Z",
+				"ImageProduct": {
+					"id": 3,
+					"image": "https://i.ibb.co/qCbHTyz/sanguchito-2.webp",
+					"createdAt": "2023-12-28T15:50:29.000Z",
+					"updatedAt": "2023-12-28T15:50:29.000Z"
+				}
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "Chocotorta",
+		"description": "Torta chocotorta de 22cm <br> \n(Peso aprox 1.5kg ) <br> \nRinde 10/12 porciones <br> ",
+		"price": 5,
+		"image": "https://i.ibb.co/DVjBKqx/chocotorta1.webp",
+		"createdAt": "2023-12-28T16:24:44.000Z",
+		"updatedAt": "2024-01-05T14:03:03.000Z",
+		"CategoryId": 4,
+		"SubCategoryProducts": [
+			{
+				"id": 8,
+				"ProductId": 3,
+				"SubCategoryId": 8,
+				"createdAt": "2023-12-28T16:24:54.000Z",
+				"updatedAt": "2023-12-28T16:24:54.000Z",
+				"SubCategory": {
+					"id": 8,
+					"date": "Simple-Deco clasica",
+					"price": 5,
+					"createdAt": "2023-12-28T16:24:53.000Z",
+					"updatedAt": "2023-12-28T16:24:53.000Z"
+				}
+			},
+			{
+				"id": 9,
+				"ProductId": 3,
+				"SubCategoryId": 9,
+				"createdAt": "2023-12-28T16:24:54.000Z",
+				"updatedAt": "2023-12-28T16:24:54.000Z",
+				"SubCategory": {
+					"id": 9,
+					"date": "Con Deco Tematica",
+					"price": 6,
+					"createdAt": "2023-12-28T16:24:53.000Z",
+					"updatedAt": "2023-12-28T16:24:53.000Z"
+				}
+			}
+		],
+		"Category": {
+			"id": 4,
+			"name": "Tortas",
+			"image": "https://i.ibb.co/2FBcTBG/6.png",
+			"createdAt": "2023-12-28T15:50:23.000Z",
+			"updatedAt": "2023-12-28T15:50:23.000Z"
+		},
+		"ImagesProductAsocciations": [
+			{
+				"id": 7,
+				"ProductId": 3,
+				"ImageProductId": 7,
+				"createdAt": "2023-12-28T16:24:50.000Z",
+				"updatedAt": "2023-12-28T16:24:50.000Z",
+				"ImageProduct": {
+					"id": 7,
+					"image": "https://i.ibb.co/CHCGvQB/chocotorta2.webp",
+					"createdAt": "2023-12-28T16:24:49.000Z",
+					"updatedAt": "2023-12-28T16:24:49.000Z"
+				}
+			},
+			{
+				"id": 8,
+				"ProductId": 3,
+				"ImageProductId": 8,
+				"createdAt": "2023-12-28T16:24:50.000Z",
+				"updatedAt": "2023-12-28T16:24:50.000Z",
+				"ImageProduct": {
+					"id": 8,
+					"image": "https://i.ibb.co/DVjBKqx/chocotorta1.webp",
+					"createdAt": "2023-12-28T16:24:49.000Z",
+					"updatedAt": "2023-12-28T16:24:49.000Z"
+				}
+			},
+			{
+				"id": 9,
+				"ProductId": 3,
+				"ImageProductId": 9,
+				"createdAt": "2023-12-28T16:24:50.000Z",
+				"updatedAt": "2023-12-28T16:24:50.000Z",
+				"ImageProduct": {
+					"id": 9,
+					"image": "https://i.ibb.co/R4z4M8s/Chocotorta3.webp",
+					"createdAt": "2023-12-28T16:24:49.000Z",
+					"updatedAt": "2023-12-28T16:24:49.000Z"
+				}
+			}
+		]
+	},
+	{
+		"id": 4,
+		"name": "Tiramisú",
+		"description": "Torta Tiramiú de 22cm <br>\nCrema clásica de queso, vainillas y café. <br>\nRinde 8 Porciones.",
+		"price": 6,
+		"image": "https://i.ibb.co/d6Sf1ct/tiramisu2.webp",
+		"createdAt": "2024-01-05T13:52:16.000Z",
+		"updatedAt": "2024-01-05T13:52:16.000Z",
+		"CategoryId": 4,
+		"SubCategoryProducts": [],
+		"Category": {
+			"id": 4,
+			"name": "Tortas",
+			"image": "https://i.ibb.co/2FBcTBG/6.png",
+			"createdAt": "2023-12-28T15:50:23.000Z",
+			"updatedAt": "2023-12-28T15:50:23.000Z"
+		},
+		"ImagesProductAsocciations": [
+			{
+				"id": 10,
+				"ProductId": 4,
+				"ImageProductId": 10,
+				"createdAt": "2024-01-05T13:52:19.000Z",
+				"updatedAt": "2024-01-05T13:52:19.000Z",
+				"ImageProduct": {
+					"id": 10,
+					"image": "https://i.ibb.co/d6Sf1ct/tiramisu2.webp",
+					"createdAt": "2024-01-05T13:52:19.000Z",
+					"updatedAt": "2024-01-05T13:52:19.000Z"
+				}
+			},
+			{
+				"id": 11,
+				"ProductId": 4,
+				"ImageProductId": 11,
+				"createdAt": "2024-01-05T13:52:19.000Z",
+				"updatedAt": "2024-01-05T13:52:19.000Z",
+				"ImageProduct": {
+					"id": 11,
+					"image": "https://i.ibb.co/qybvbt5/tiramisu1.webp",
+					"createdAt": "2024-01-05T13:52:19.000Z",
+					"updatedAt": "2024-01-05T13:52:19.000Z"
+				}
+			}
+		]
+	},
+	{
+		"id": 5,
+		"name": "Carrot Cake",
+		"description": "Torta de zanahoria, con frosting de queso. <br>\nRinde 10/12 porciones <br>\nPeso aprox 1.5kg <br>\n",
+		"price": 6,
+		"image": "https://i.ibb.co/TLRYpGM/carrot1.webp",
+		"createdAt": "2024-01-05T13:59:03.000Z",
+		"updatedAt": "2024-01-05T13:59:03.000Z",
+		"CategoryId": 4,
+		"SubCategoryProducts": [],
+		"Category": {
+			"id": 4,
+			"name": "Tortas",
+			"image": "https://i.ibb.co/2FBcTBG/6.png",
+			"createdAt": "2023-12-28T15:50:23.000Z",
+			"updatedAt": "2023-12-28T15:50:23.000Z"
+		},
+		"ImagesProductAsocciations": [
+			{
+				"id": 12,
+				"ProductId": 5,
+				"ImageProductId": 12,
+				"createdAt": "2024-01-05T13:59:11.000Z",
+				"updatedAt": "2024-01-05T13:59:11.000Z",
+				"ImageProduct": {
+					"id": 12,
+					"image": "https://i.ibb.co/Hqqtt2d/carrot2.webp",
+					"createdAt": "2024-01-05T13:59:11.000Z",
+					"updatedAt": "2024-01-05T13:59:11.000Z"
+				}
+			},
+			{
+				"id": 13,
+				"ProductId": 5,
+				"ImageProductId": 13,
+				"createdAt": "2024-01-05T13:59:11.000Z",
+				"updatedAt": "2024-01-05T13:59:11.000Z",
+				"ImageProduct": {
+					"id": 13,
+					"image": "https://i.ibb.co/TLRYpGM/carrot1.webp",
+					"createdAt": "2024-01-05T13:59:11.000Z",
+					"updatedAt": "2024-01-05T13:59:11.000Z"
+				}
+			}
+		]
+	},
+	{
+		"id": 6,
+		"name": "Red Velvet",
+		"description": "Torta Clasica Red Velvet, con Frosting de queso. <br>\nPeso aprox. 1.5 kg <br>\nRinde 10/12 Porciones. <br>\n",
+		"price": 6,
+		"image": "https://i.ibb.co/rfR5Z1F/redvelvet2.webp",
+		"createdAt": "2024-01-05T14:05:06.000Z",
+		"updatedAt": "2024-01-05T14:05:06.000Z",
+		"CategoryId": 4,
+		"SubCategoryProducts": [],
+		"Category": {
+			"id": 4,
+			"name": "Tortas",
+			"image": "https://i.ibb.co/2FBcTBG/6.png",
+			"createdAt": "2023-12-28T15:50:23.000Z",
+			"updatedAt": "2023-12-28T15:50:23.000Z"
+		},
+		"ImagesProductAsocciations": [
+			{
+				"id": 14,
+				"ProductId": 6,
+				"ImageProductId": 14,
+				"createdAt": "2024-01-05T14:05:10.000Z",
+				"updatedAt": "2024-01-05T14:05:10.000Z",
+				"ImageProduct": {
+					"id": 14,
+					"image": "https://i.ibb.co/mv1svYR/redvelvet1.webp",
+					"createdAt": "2024-01-05T14:05:09.000Z",
+					"updatedAt": "2024-01-05T14:05:09.000Z"
+				}
+			},
+			{
+				"id": 15,
+				"ProductId": 6,
+				"ImageProductId": 15,
+				"createdAt": "2024-01-05T14:05:10.000Z",
+				"updatedAt": "2024-01-05T14:05:10.000Z",
+				"ImageProduct": {
+					"id": 15,
+					"image": "https://i.ibb.co/rfR5Z1F/redvelvet2.webp",
+					"createdAt": "2024-01-05T14:05:09.000Z",
+					"updatedAt": "2024-01-05T14:05:09.000Z"
+				}
+			}
+		]
+	},
+	{
+		"id": 7,
+		"name": "Shots",
+		"description": "Vasitos de Postres individuales. <br>\nShots de 100cc. <br>\nPrecio por Docena. <br>",
+		"price": 6.5,
+		"image": "https://i.ibb.co/FYHn30m/shot2.webp",
+		"createdAt": "2024-01-05T14:09:55.000Z",
+		"updatedAt": "2024-01-05T14:26:00.000Z",
+		"CategoryId": 1,
+		"SubCategoryProducts": [],
+		"Category": {
+			"id": 1,
+			"name": "Pastelería",
+			"image": "https://i.ibb.co/7bqwkwS/5.png",
+			"createdAt": "2023-12-28T15:50:22.000Z",
+			"updatedAt": "2023-12-28T15:50:22.000Z"
+		},
+		"ImagesProductAsocciations": [
+			{
+				"id": 16,
+				"ProductId": 7,
+				"ImageProductId": 16,
+				"createdAt": "2024-01-05T14:10:20.000Z",
+				"updatedAt": "2024-01-05T14:10:20.000Z",
+				"ImageProduct": {
+					"id": 16,
+					"image": "https://i.ibb.co/nDrD83V/shot3.webp",
+					"createdAt": "2024-01-05T14:10:19.000Z",
+					"updatedAt": "2024-01-05T14:10:19.000Z"
+				}
+			},
+			{
+				"id": 17,
+				"ProductId": 7,
+				"ImageProductId": 17,
+				"createdAt": "2024-01-05T14:10:20.000Z",
+				"updatedAt": "2024-01-05T14:10:20.000Z",
+				"ImageProduct": {
+					"id": 17,
+					"image": "https://i.ibb.co/7X2fN49/shot1.webp",
+					"createdAt": "2024-01-05T14:10:19.000Z",
+					"updatedAt": "2024-01-05T14:10:19.000Z"
+				}
+			},
+			{
+				"id": 18,
+				"ProductId": 7,
+				"ImageProductId": 18,
+				"createdAt": "2024-01-05T14:10:20.000Z",
+				"updatedAt": "2024-01-05T14:10:20.000Z",
+				"ImageProduct": {
+					"id": 18,
+					"image": "https://i.ibb.co/FYHn30m/shot2.webp",
+					"createdAt": "2024-01-05T14:10:19.000Z",
+					"updatedAt": "2024-01-05T14:10:19.000Z"
+				}
+			}
+		]
+	},
+	{
+		"id": 8,
+		"name": "Picada",
+		"description": "Tabla de fiambres y quesos. <br>\ncon 40 figacitas <br>\nIncluye: salamin, jamon cocido, jamon crudo, lomito, y 3 variedades de queso. <br>\n",
+		"price": 10.5,
+		"image": "https://i.ibb.co/zZ5ZN3w/picada2.webp",
+		"createdAt": "2024-01-05T14:29:47.000Z",
+		"updatedAt": "2024-01-05T14:29:47.000Z",
+		"CategoryId": 2,
+		"SubCategoryProducts": [],
+		"Category": {
+			"id": 2,
+			"name": "Lunch",
+			"image": "https://i.ibb.co/bKCkFcT/4.png",
+			"createdAt": "2023-12-28T15:50:22.000Z",
+			"updatedAt": "2023-12-28T15:50:22.000Z"
+		},
+		"ImagesProductAsocciations": [
+			{
+				"id": 19,
+				"ProductId": 8,
+				"ImageProductId": 19,
+				"createdAt": "2024-01-05T14:29:50.000Z",
+				"updatedAt": "2024-01-05T14:29:50.000Z",
+				"ImageProduct": {
+					"id": 19,
+					"image": "https://i.ibb.co/0y8v9pC/picada1.webp",
+					"createdAt": "2024-01-05T14:29:50.000Z",
+					"updatedAt": "2024-01-05T14:29:50.000Z"
+				}
+			},
+			{
+				"id": 20,
+				"ProductId": 8,
+				"ImageProductId": 20,
+				"createdAt": "2024-01-05T14:29:50.000Z",
+				"updatedAt": "2024-01-05T14:29:50.000Z",
+				"ImageProduct": {
+					"id": 20,
+					"image": "https://i.ibb.co/zZ5ZN3w/picada2.webp",
+					"createdAt": "2024-01-05T14:29:50.000Z",
+					"updatedAt": "2024-01-05T14:29:50.000Z"
+				}
+			}
+		]
+	},
+	{
+		"id": 9,
+		"name": "Bandeja Degustación",
+		"description": "Bandeja de 4 Minitartas de 14cm, con sabores a elección.<br>\n<br>\nOpciones disponibles:<br>\n-Lemon pie<br>\n-Tarta tofi negro<br>\n-Tarta tofi blanco<br>\n-Torta brownie<br>\n-Cheesecake<br>\n-Tarta de frutilla<br>\n-Coco y dulce de leche<br>\n-Ricota<br>\n-Frutos rojos<br>\n<br>\nSe detalla la elección de sabores al finalizar la compra.",
+		"price": 6.5,
+		"image": "https://i.ibb.co/RvF3p1r/bandeja-portada.webp",
+		"createdAt": "2024-01-05T14:39:24.000Z",
+		"updatedAt": "2024-01-05T14:39:24.000Z",
+		"CategoryId": 1,
+		"SubCategoryProducts": [],
+		"Category": {
+			"id": 1,
+			"name": "Pastelería",
+			"image": "https://i.ibb.co/7bqwkwS/5.png",
+			"createdAt": "2023-12-28T15:50:22.000Z",
+			"updatedAt": "2023-12-28T15:50:22.000Z"
+		},
+		"ImagesProductAsocciations": [
+			{
+				"id": 22,
+				"ProductId": 9,
+				"ImageProductId": 22,
+				"createdAt": "2024-01-05T14:39:27.000Z",
+				"updatedAt": "2024-01-05T14:39:27.000Z",
+				"ImageProduct": {
+					"id": 22,
+					"image": "https://i.ibb.co/RvF3p1r/bandeja-portada.webp",
+					"createdAt": "2024-01-05T14:39:26.000Z",
+					"updatedAt": "2024-01-05T14:39:26.000Z"
+				}
+			},
+			{
+				"id": 23,
+				"ProductId": 9,
+				"ImageProductId": 23,
+				"createdAt": "2024-01-05T14:39:27.000Z",
+				"updatedAt": "2024-01-05T14:39:27.000Z",
+				"ImageProduct": {
+					"id": 23,
+					"image": "https://i.ibb.co/pwm08nL/bandeja-2.webp",
+					"createdAt": "2024-01-05T14:39:26.000Z",
+					"updatedAt": "2024-01-05T14:39:26.000Z"
+				}
+			},
+			{
+				"id": 24,
+				"ProductId": 9,
+				"ImageProductId": 24,
+				"createdAt": "2024-01-05T14:39:27.000Z",
+				"updatedAt": "2024-01-05T14:39:27.000Z",
+				"ImageProduct": {
+					"id": 24,
+					"image": "https://i.ibb.co/dMPCG1C/bandeja-1.webp",
+					"createdAt": "2024-01-05T14:39:27.000Z",
+					"updatedAt": "2024-01-05T14:39:27.000Z"
+				}
+			}
+		]
+	},
+	{
+		"id": 10,
+		"name": "Cupcakes",
+		"description": "Cupcakes Simples o Decorados. <br>\nPrecio por Docena.<br>\nDecorados, solo vainilla o chocolate, con centro de dulce de leche.<br>\nPueden ser de distintos sabores: <br>\n-Vainilla o Chocolate, con relleno de dulce de leche. <br>\n-Red Velvet <br>\n-Carrot Cake <br>\n-Matilda (chocolate) <br>\n",
+		"price": 5,
+		"image": "https://i.ibb.co/xJpktj9/cupcakeportada.webp",
+		"createdAt": "2024-01-05T18:06:38.000Z",
+		"updatedAt": "2024-01-05T18:06:38.000Z",
+		"CategoryId": 1,
+		"SubCategoryProducts": [
+			{
+				"id": 10,
+				"ProductId": 10,
+				"SubCategoryId": 10,
+				"createdAt": "2024-01-05T18:06:46.000Z",
+				"updatedAt": "2024-01-05T18:06:46.000Z",
+				"SubCategory": {
+					"id": 10,
+					"date": "Simples,un sabor y color por docena",
+					"price": 5,
+					"createdAt": "2024-01-05T18:06:46.000Z",
+					"updatedAt": "2024-01-05T18:06:46.000Z"
+				}
+			},
+			{
+				"id": 11,
+				"ProductId": 10,
+				"SubCategoryId": 11,
+				"createdAt": "2024-01-05T18:06:46.000Z",
+				"updatedAt": "2024-01-05T18:06:46.000Z",
+				"SubCategory": {
+					"id": 11,
+					"date": "Decorados, fondant o topper ",
+					"price": 6.5,
+					"createdAt": "2024-01-05T18:06:46.000Z",
+					"updatedAt": "2024-01-05T18:36:14.000Z"
+				}
+			}
+		],
+		"Category": {
+			"id": 1,
+			"name": "Pastelería",
+			"image": "https://i.ibb.co/7bqwkwS/5.png",
+			"createdAt": "2023-12-28T15:50:22.000Z",
+			"updatedAt": "2023-12-28T15:50:22.000Z"
+		},
+		"ImagesProductAsocciations": [
+			{
+				"id": 25,
+				"ProductId": 10,
+				"ImageProductId": 26,
+				"createdAt": "2024-01-05T18:06:42.000Z",
+				"updatedAt": "2024-01-05T18:06:42.000Z",
+				"ImageProduct": {
+					"id": 25,
+					"image": "https://i.ibb.co/vhDvvHt/cupcake2.webp",
+					"createdAt": "2024-01-05T18:06:41.000Z",
+					"updatedAt": "2024-01-05T18:06:41.000Z"
+				}
+			},
+			{
+				"id": 26,
+				"ProductId": 10,
+				"ImageProductId": 25,
+				"createdAt": "2024-01-05T18:06:42.000Z",
+				"updatedAt": "2024-01-05T18:06:42.000Z",
+				"ImageProduct": {
+					"id": 26,
+					"image": "https://i.ibb.co/xJpktj9/cupcakeportada.webp",
+					"createdAt": "2024-01-05T18:06:41.000Z",
+					"updatedAt": "2024-01-05T18:06:41.000Z"
+				}
+			},
+			{
+				"id": 27,
+				"ProductId": 10,
+				"ImageProductId": 27,
+				"createdAt": "2024-01-05T18:06:42.000Z",
+				"updatedAt": "2024-01-05T18:06:42.000Z",
+				"ImageProduct": {
+					"id": 27,
+					"image": "https://i.ibb.co/P5HPBr9/cupcake1.webp",
+					"createdAt": "2024-01-05T18:06:42.000Z",
+					"updatedAt": "2024-01-05T18:06:42.000Z"
+				}
+			},
+			{
+				"id": 28,
+				"ProductId": 10,
+				"ImageProductId": 28,
+				"createdAt": "2024-01-05T18:06:42.000Z",
+				"updatedAt": "2024-01-05T18:06:42.000Z",
+				"ImageProduct": {
+					"id": 28,
+					"image": "https://i.ibb.co/Pc9h2pL/cupcake3.webp",
+					"createdAt": "2024-01-05T18:06:42.000Z",
+					"updatedAt": "2024-01-05T18:06:42.000Z"
+				}
+			}
+		]
+	},
+	{
+		"id": 11,
+		"name": "Canastitas",
+		"description": "Canastitas, nuestra version abierta de las empanadas.<br>\nPrecio por Docena.<br>\nUn sabor por docena.<br>\nOpciones disponibles: <br>\n-Carne<br>\n-Pollo <br>\n-Jamon y queso <br>\n-Capresse<br>\n-Fugazza <br>\n-Humita<br>\n-Verdura <br>\n",
+		"price": 4.5,
+		"image": "https://i.ibb.co/TMmn6c1/cxanastita2.webp",
+		"createdAt": "2024-01-06T23:10:14.000Z",
+		"updatedAt": "2024-01-06T23:10:14.000Z",
+		"CategoryId": 2,
+		"SubCategoryProducts": [],
+		"Category": {
+			"id": 2,
+			"name": "Lunch",
+			"image": "https://i.ibb.co/bKCkFcT/4.png",
+			"createdAt": "2023-12-28T15:50:22.000Z",
+			"updatedAt": "2023-12-28T15:50:22.000Z"
+		},
+		"ImagesProductAsocciations": [
+			{
+				"id": 29,
+				"ProductId": 11,
+				"ImageProductId": 29,
+				"createdAt": "2024-01-06T23:10:18.000Z",
+				"updatedAt": "2024-01-06T23:10:18.000Z",
+				"ImageProduct": {
+					"id": 29,
+					"image": "https://i.ibb.co/bB0N5MM/canastita1.webp",
+					"createdAt": "2024-01-06T23:10:18.000Z",
+					"updatedAt": "2024-01-06T23:10:18.000Z"
+				}
+			},
+			{
+				"id": 30,
+				"ProductId": 11,
+				"ImageProductId": 30,
+				"createdAt": "2024-01-06T23:10:19.000Z",
+				"updatedAt": "2024-01-06T23:10:19.000Z",
+				"ImageProduct": {
+					"id": 30,
+					"image": "https://i.ibb.co/CPzQJLk/canastita3.webp",
+					"createdAt": "2024-01-06T23:10:18.000Z",
+					"updatedAt": "2024-01-06T23:10:18.000Z"
+				}
+			},
+			{
+				"id": 31,
+				"ProductId": 11,
+				"ImageProductId": 31,
+				"createdAt": "2024-01-06T23:10:19.000Z",
+				"updatedAt": "2024-01-06T23:10:19.000Z",
+				"ImageProduct": {
+					"id": 31,
+					"image": "https://i.ibb.co/TMmn6c1/cxanastita2.webp",
+					"createdAt": "2024-01-06T23:10:18.000Z",
+					"updatedAt": "2024-01-06T23:10:18.000Z"
+				}
+			}
+		]
+	}
+]

@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "expo": "~50.0.2",
+    "expo-constants": "^15.4.5",
     "expo-status-bar": "~1.11.1",
     "react": "18.2.0",
-    "react-native": "0.73.2"
+    "react-native": "0.73.2",
+    "react-router-dom": "^6.21.3",
+    "react-router-native": "^6.21.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
