@@ -7,22 +7,10 @@ import { Switch, Route } from "react-router-native";
 export const Main = () => {
   return (
     <View style={styles.container}>
-      <View >
+      <View>
         <Navbar></Navbar>
         <Text>lorema</Text>
       </View>
-{/* <View style={styles.container}>
-        <Navbar></Navbar>
-        <Switch>
-          <Route path={"/"}>
-            <Products />
-          </Route>
-          <Route path={"/producto"}>
-            <DescriptionProduct />
-          </Route>
-        </Switch>
-      </View> */}
-      
     </View>
   );
 };

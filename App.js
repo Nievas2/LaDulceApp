@@ -6,15 +6,13 @@ import { NativeRouter, Route, Routes } from "react-router-native";
 export default function App() {
   return (
     <>
-   
-    <NativeRouter>
-      
-      <Routes>
-      <Route path="/" element={<Products/>} />
-      <Route path="/producto/:id" element={<DescriptionProduct/>} />
-      
-      </Routes>
-    </NativeRouter>
+      <NativeRouter>
+        <Routes>
+          <Route element={<Navbar />} />
+          <Route path="/" element={<Products />} />
+          <Route path="/producto/:id" element={<DescriptionProduct />} />
+        </Routes>
+      </NativeRouter>
     </>
   );
 }
