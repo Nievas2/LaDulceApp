@@ -26,9 +26,14 @@ export const Recomended = ({product}) => {
         renderItem={({ item }) => <RecomendedItem item={item} />}
         horizontal
         showsHorizontalScrollIndicator
+        contentContainerStyle={{
+          paddingBottom: 10,
+        }}
+        persistentScrollbar={true}
         pagingEnabled
         bounces={false}
         keyExtractor={(item) => item.id}
+        
         onScroll={Animated.event(
           [{ nativeEvent: { contentOffset: { x: scrollX } } }],
           {

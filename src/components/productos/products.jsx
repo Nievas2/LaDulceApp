@@ -21,9 +21,13 @@ export const Products = () => {
           keyExtractor={(item) => item.id}
           contentContainerStyle={{
             padding: 5,
+            paddingBottom:10,
             gap: 5
           }}
-          showsHorizontalScrollIndicator={false}
+          persistentScrollbar={true}
+          pagingEnabled
+          showsHorizontalScrollIndicator
+          
         />
  
 

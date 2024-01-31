@@ -51,6 +51,10 @@ import {
           renderItem={({ item }) => <ItemsCarousel item={item} />}
           horizontal
           showsHorizontalScrollIndicator
+          contentContainerStyle={{
+            paddingBottom: 10,
+          }}
+          persistentScrollbar={true}
           pagingEnabled
           bounces={false}
           keyExtractor={(item) => item.id}
