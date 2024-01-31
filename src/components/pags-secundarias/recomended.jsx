@@ -12,15 +12,15 @@ import {
 } from "react-native";
 import React, { useState, useRef } from "react";
 import { styles } from "../../styles/styleSheet";
-import { useParams } from "react-router-native";
-import { Link } from "react-router-native";
-import products from "../../mook/products.json";
-
-export const Recomended = ({product}) => {
+import ArrowLeft from "../../../assets/svgs/arrow-left.svg";
+import ArrowRight from "../../../assets/svgs/arrow-right.svg";
+export const Recomended = ({ product }) => {
   const scrollX = useRef(new Animated.Value(0)).current;
   const { width } = useWindowDimensions();
   return (
     <View style={{ flex: 1, alignItems: "center" }}>
+      
+
       <FlatList
         data={product}
         renderItem={({ item }) => <RecomendedItem item={item} />}
@@ -33,7 +33,6 @@ export const Recomended = ({product}) => {
         pagingEnabled
         bounces={false}
         keyExtractor={(item) => item.id}
-        
         onScroll={Animated.event(
           [{ nativeEvent: { contentOffset: { x: scrollX } } }],
           {
@@ -45,24 +44,24 @@ export const Recomended = ({product}) => {
   );
 };
 export const RecomendedItem = ({ item }) => {
-    const { width } = useWindowDimensions();
-    return (
-      <View style={[styles.container, { width }]} key={item.id}>
-        <View style={{ flex: 1 }}>
-          <Image
-            source={{ uri: item.image }}
-            style={[
-              {
-                justifyContent: "center",
-                width: 250,
-                height: 250
-              },
-            ]}
-          />
-        </View>
+  const { width } = useWindowDimensions();
+  return (
+    <View style={[styles.container, { width }]} key={item.id}>
+      <View style={{ flex: 1 }}>
+        <Image
+          source={{ uri: item.image }}
+          style={[
+            {
+              justifyContent: "center",
+              width: 250,
+              height: 250,
+            },
+          ]}
+        />
       </View>
-    );
-  };
+    </View>
+  );
+};
 export function seleccionarTresProductosUnicos({ product, id }) {
   const seleccionados = [];
 
@@ -77,7 +76,7 @@ export function seleccionarTresProductosUnicos({ product, id }) {
       product[Math.floor(Math.random() * product.length)];
 
     // Verificar si el producto ya fue seleccionado
-    if (!yaSeleccionado(productoAleatorio.id ) && id != productoAleatorio.id) {
+    if (!yaSeleccionado(productoAleatorio.id) && id != productoAleatorio.id) {
       // Agregar el producto a la lista de seleccionados
       seleccionados.push(productoAleatorio);
     }
@@ -88,8 +87,8 @@ export function seleccionarTresProductosUnicos({ product, id }) {
 export const HomeCarrusel = ({ item }) => {
   const { width } = useWindowDimensions();
   return (
-    <View style={[styles.container, { width }, {height: 150} ]}>
-      <View >
+    <View style={[styles.container, { width }, { height: 150 }]}>
+      <View>
         <Image
           source={item.image}
           style={[
@@ -97,7 +96,6 @@ export const HomeCarrusel = ({ item }) => {
               flex: 1,
               justifyContent: "center",
               width: 500,
-              
             },
           ]}
         />

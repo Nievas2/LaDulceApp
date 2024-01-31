@@ -19,6 +19,7 @@ import { useRef } from "react";
 import Products from "../../mook/products.json";
 import { styles } from "../../styles/styleSheet";
 import { PreguntasFrecuentes } from "./preguntas-frecuentes";
+import { Flechitas } from "../utils/flechitas";
 export const Home = () => {
   const images = [
     { image: require("../../../assets/carrusel/1.webp") },
@@ -38,6 +39,7 @@ export const Home = () => {
                 alignItems: "center",
               }}
             >
+              
               <FlatList
                 data={images}
                 renderItem={({ item }) => <HomeCarrusel item={item} />}
@@ -61,9 +63,11 @@ export const Home = () => {
           </View>
           <View style={[styles.container]}>
             <Text style={styles.title}>Productos destacados</Text>
+            <Flechitas top={120}/>
             <Recomended product={products} />
           </View>
           <View style={[styles.container]}>
+            <Text style={styles.title}>Preguntas frecuentes</Text>
             <PreguntasFrecuentes />
           </View>
         </View>

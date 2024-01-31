@@ -17,14 +17,14 @@ import { Link } from "react-router-native";
 import products from "../../mook/products.json";
 import { Recomended, seleccionarTresProductosUnicos } from "./recomended";
 import { Carrusel } from "./carrusel";
-
+import { Flechitas } from "../utils/flechitas";
 export const DescriptionProduct = () => {
   let { id } = useParams();
   let product = {};
   products.find((element) => {
     if (element.id == id) product = element;
   });
-  const unique = seleccionarTresProductosUnicos({product: products, id})
+  const unique = seleccionarTresProductosUnicos({ product: products, id });
   return (
     <View
       style={{
@@ -36,6 +36,7 @@ export const DescriptionProduct = () => {
       <ScrollView>
         <View style={{ flex: 1, marginBottom: 200 }}>
           <View style={{ flex: 1 }}>
+            <Flechitas top={90}/>
             <Carrusel />
           </View>
           <View style={{ flex: 1, padding: 15 }}>
@@ -95,7 +96,8 @@ export const DescriptionProduct = () => {
           </View>
           <View style={[styles.container]}>
             <Text style={styles.title}>Productos Recomendados</Text>
-            <Recomended product={unique}/>
+            <Flechitas top={120}/>
+            <Recomended product={unique} />
           </View>
         </View>
       </ScrollView>

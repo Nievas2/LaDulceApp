@@ -15,6 +15,7 @@ import {
   import { useParams } from "react-router-native";
   import { Link } from "react-router-native";
   import products from "../../mook/products.json";
+import { Flechitas } from "../utils/flechitas";
   export const ItemsCarousel = ({ item }) => {
     const { width } = useWindowDimensions();
     return (
