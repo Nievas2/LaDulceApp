@@ -10,11 +10,12 @@ export const Card = ({ product }) => {
             pathname: `/producto/${product.id}`,
             state: { product },
           }}
+          underlayColor="transparent"
         >
           <View key={product.id}>
             <Image source={{ uri: product.image }} style={styles.image} />
-            <Text style={styles.bold}>{product.name}</Text>
-            <Text numberOfLines={3} ellipsizeMode="tail">
+            <Text style={styles.title}>{product.name}</Text>
+            <Text numberOfLines={3} ellipsizeMode="tail" >
               {product.description}
             </Text>
           </View>

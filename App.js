@@ -1,4 +1,4 @@
-import { DescriptionProduct } from "./src/components/descriptionProduct";
+import { DescriptionProduct } from "./src/components/Pags.Secundarias/descriptionProduct";
 import { Navbar } from "./src/components/navbar";
 import { Products } from "./src/components/products";
 import { Main } from "./src/main";
@@ -7,11 +7,7 @@ export default function App() {
   return (
     <>
       <NativeRouter>
-        <Routes>
-          <Route element={<Navbar />} />
-          <Route path="/" element={<Products />} />
-          <Route path="/producto/:id" element={<DescriptionProduct />} />
-        </Routes>
+        <Main></Main>
       </NativeRouter>
     </>
   );

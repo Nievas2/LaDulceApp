@@ -3,15 +3,16 @@ import Constants from "expo-constants";
 
 export const styles = StyleSheet.create({
   container: {
-    marginTop: Constants.statusBarHeight,
     flex: 1,
     backgroundColor: "#fbe4dd",
     alignItems: "center",
   },
   navbar: {
+    marginTop: Constants.statusBarHeight,
     flex: 1,
     backgroundColor: "#fbe4dd",
     alignItems: "center",
+    color: "#564", borderColor: "#f00", fontSize: 15, minHeight: 30
   },
   card: {
     flex: 1,
@@ -32,8 +33,26 @@ export const styles = StyleSheet.create({
     width:200, 
     alignSelf: "center",
   },
+  imageProduct:{
+    flex: 0.7, 
+    justifyContent: "center",
+  },
   bold:{
     fontWeight: "bold",
     fontSize: 15
+  },
+  title:{
+    fontSize: 20,
+    fontWeight: "bold",
+    textAlign: "center"
+  },
+  subTitle:{
+    fontSize: 18,
+    fontWeight:"bold",
+    marginBottom: 15
+  },
+  texts:{
+    fontSize: 15,
+    flex: 1
   }
 });
