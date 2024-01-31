@@ -15,16 +15,16 @@ import { styles } from "../../styles/styleSheet";
 import { useParams } from "react-router-native";
 import { Link } from "react-router-native";
 import products from "../../mook/products.json";
-import { Recomended } from "./recomended";
+import { Recomended, seleccionarTresProductosUnicos } from "./recomended";
 import { Carrusel } from "./carrusel";
 
 export const DescriptionProduct = () => {
   let { id } = useParams();
   let product = {};
-
   products.find((element) => {
     if (element.id == id) product = element;
   });
+  const unique = seleccionarTresProductosUnicos({product: products, id})
   return (
     <View
       style={{
@@ -58,7 +58,7 @@ export const DescriptionProduct = () => {
               >
                 <View style={{ flex: 1 }}>
                   <Link
-                    to={{ pathname: "/" }}
+                    to={{ pathname: "/productos" }}
                     style={{ margin: 15, width: 150 }}
                     underlayColor="transparent"
                   >
@@ -95,7 +95,7 @@ export const DescriptionProduct = () => {
           </View>
           <View style={[styles.container]}>
             <Text style={styles.title}>Productos Recomendados</Text>
-            <Recomended />
+            <Recomended product={unique}/>
           </View>
         </View>
       </ScrollView>

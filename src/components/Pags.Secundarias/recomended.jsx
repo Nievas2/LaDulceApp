@@ -16,17 +16,13 @@ import { useParams } from "react-router-native";
 import { Link } from "react-router-native";
 import products from "../../mook/products.json";
 
-export const Recomended = () => {
-  let { id } = useParams();
-  let productRecomended = {};
+export const Recomended = ({product}) => {
   const scrollX = useRef(new Animated.Value(0)).current;
   const { width } = useWindowDimensions();
-  productRecomended = products;
-  productRecomended = seleccionarTresProductosUnicos({ product: productRecomended , id });
   return (
     <View style={{ flex: 1, alignItems: "center" }}>
       <FlatList
-        data={productRecomended}
+        data={product}
         renderItem={({ item }) => <RecomendedItem item={item} />}
         horizontal
         showsHorizontalScrollIndicator
@@ -46,19 +42,18 @@ export const Recomended = () => {
 export const RecomendedItem = ({ item }) => {
     const { width } = useWindowDimensions();
     return (
-      <View style={[styles.container, { width }]}>
+      <View style={[styles.container, { width }]} key={item.id}>
         <View style={{ flex: 1 }}>
-          <Text>                                                 </Text> 
           <Image
             source={{ uri: item.image }}
             style={[
               {
-                flex: 1,
                 justifyContent: "center",
-                height: 250,
+                width: 250,
+                height: 250
               },
             ]}
-          ></Image>
+          />
         </View>
       </View>
     );
@@ -85,3 +80,23 @@ export function seleccionarTresProductosUnicos({ product, id }) {
 
   return seleccionados;
 }
+export const HomeCarrusel = ({ item }) => {
+  const { width } = useWindowDimensions();
+  return (
+    <View style={[styles.container, { width }, {height: 150} ]}>
+      <View >
+        <Image
+          source={item.image}
+          style={[
+            {
+              flex: 1,
+              justifyContent: "center",
+              width: 500,
+              
+            },
+          ]}
+        />
+      </View>
+    </View>
+  );
+};

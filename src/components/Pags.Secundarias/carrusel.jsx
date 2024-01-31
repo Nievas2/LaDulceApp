@@ -19,15 +19,15 @@ import {
     const { width } = useWindowDimensions();
     return (
       <View style={[styles.container, { width }]}>
-        <View style={{ flex: 1 }}>
-          <Text>                                                 </Text>
+        <View >
           <Image
             source={{ uri: item.ImageProduct.image }}
             style={[
               {
-                flex: 1,
+               
                 justifyContent: "center",
-                height: 250,
+                width: 250,
+                height: 250
               },
             ]}
           />

@@ -9,6 +9,11 @@ export const Navbar = () => {
           <Text>Inicios</Text>
         </View>
       </Link>
+      <Link to={"/productos"} underlayColor="transparent">
+        <View>
+          <Text>Productos</Text>
+        </View>
+      </Link>
     </View>
   );
 };

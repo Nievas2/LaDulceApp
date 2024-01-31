@@ -6,13 +6,18 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fbe4dd",
     alignItems: "center",
+    borderRadius: 15
   },
   navbar: {
     marginTop: Constants.statusBarHeight,
     flex: 1,
+    flexDirection: "row",
+    gap: 15,
     backgroundColor: "#fbe4dd",
     alignItems: "center",
-    color: "#564", borderColor: "#f00", fontSize: 15, minHeight: 30
+    color: "#564", borderColor: "#f00", fontSize: 50, minHeight: 50,
+    alignContent: "center",
+    alignSelf: "center",
   },
   card: {
     flex: 1,
