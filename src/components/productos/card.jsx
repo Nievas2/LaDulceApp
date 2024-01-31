@@ -1,5 +1,5 @@
 import { View, Text, Image, TouchableOpacity, Button } from "react-native";
-import { styles } from "../styles/styleSheet";
+import { styles } from "../../styles/styleSheet";
 import { Link } from "react-router-native";
 export const Card = ({ product }) => {
   return (

@@ -1,0 +1,37 @@
+[
+	{
+		"id": 1,
+		"name": "Pastelería",
+		"image": "https://i.ibb.co/7bqwkwS/5.png",
+		"createdAt": "2023-12-28T15:50:22.000Z",
+		"updatedAt": "2023-12-28T15:50:22.000Z"
+	},
+	{
+		"id": 2,
+		"name": "Lunch",
+		"image": "https://i.ibb.co/bKCkFcT/4.png",
+		"createdAt": "2023-12-28T15:50:22.000Z",
+		"updatedAt": "2023-12-28T15:50:22.000Z"
+	},
+	{
+		"id": 3,
+		"name": "Perniles y carnes",
+		"image": "https://i.ibb.co/60zydsD/3.png",
+		"createdAt": "2023-12-28T15:50:22.000Z",
+		"updatedAt": "2023-12-28T15:50:22.000Z"
+	},
+	{
+		"id": 4,
+		"name": "Tortas",
+		"image": "https://i.ibb.co/2FBcTBG/6.png",
+		"createdAt": "2023-12-28T15:50:23.000Z",
+		"updatedAt": "2023-12-28T15:50:23.000Z"
+	},
+	{
+		"id": 5,
+		"name": "Combos y agregados",
+		"image": "https://i.ibb.co/WnQ0VBp/7.png",
+		"createdAt": "2023-12-28T15:50:23.000Z",
+		"updatedAt": "2023-12-28T15:50:23.000Z"
+	}
+]

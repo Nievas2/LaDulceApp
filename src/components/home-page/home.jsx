@@ -14,7 +14,7 @@ import {
   HomeCarrusel,
   Recomended,
   RecomendedItem,
-} from "../Pags.Secundarias/recomended";
+} from "../pags-secundarias/recomended";
 import { useRef } from "react";
 import Products from "../../mook/products.json";
 import { styles } from "../../styles/styleSheet";

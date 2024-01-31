@@ -1,6 +1,6 @@
 import { Navbar } from "./components/navbar.jsx";
-import { Products } from "./components/products.jsx";
-import { DescriptionProduct } from "./components/pags.Secundarias/descriptionProduct.jsx";
+import { Products } from "./components/productos/products.jsx";
+import { DescriptionProduct } from "./components/pags-secundarias/descriptionProduct.jsx";
 import { styles } from "./styles/styleSheet";
 import { View, Text } from "react-native";
 import { Switch, Routes, Route } from "react-router-native";

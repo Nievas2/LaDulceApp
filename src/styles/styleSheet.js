@@ -59,5 +59,21 @@ export const styles = StyleSheet.create({
   texts:{
     fontSize: 15,
     flex: 1
+  },
+  itemCategory:{
+    /* height: 50,
+    width: 50,
+    borderRadius: 100,
+    resizeMode: "cover" */
+    width: 100,
+    height: 100,
+    resizeMode: "cover",
+    borderRadius: 24,
+    margin: 0,
+    marginBottom: 10,
+  },
+  debugger:{
+    borderWidth: 10,
+    borderColor:"#f00"
   }
 });
