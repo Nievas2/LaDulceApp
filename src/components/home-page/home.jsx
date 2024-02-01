@@ -19,15 +19,14 @@ import { useRef } from "react";
 import Products from "../../mook/products.json";
 import { styles } from "../../styles/styleSheet";
 import { PreguntasFrecuentes } from "./preguntas-frecuentes";
-import { Flechitas } from "../utils/flechitas";
+import { Flechitas } from "../../utils/flechitas";
 export const Home = () => {
   const images = [
-    { image: require("../../../assets/carrusel/1.webp") },
-    { image: require("../../../assets/carrusel/2.webp") },
-    { image: require("../../../assets/carrusel/3.webp") },
+    { image: require("../../../assets/carrusel/1.webp"), id: 800 },
+    { image: require("../../../assets/carrusel/2.webp"), id: 801 },
+    { image: require("../../../assets/carrusel/3.webp"), id: 802 },
   ];
   const { width } = useWindowDimensions();
-  const scrollX = useRef(new Animated.Value(0)).current;
   const products = Products.slice(-3);
   return (
     <View style={{ padding: 15 }}>
@@ -50,24 +49,17 @@ export const Home = () => {
                 }}
                 persistentScrollbar={true}
                 pagingEnabled
-                bounces={false}
                 keyExtractor={(item) => item.id}
-                onScroll={Animated.event(
-                  [{ nativeEvent: { contentOffset: { x: scrollX } } }],
-                  {
-                    useNativeDriver: false,
-                  }
-                )}
               />
             </View>
           </View>
-          <View style={[styles.container]}>
+          <View style={[styles.container, {marginTop: 15}]}>
             <Text style={styles.title}>Productos destacados</Text>
             <Flechitas top={120}/>
             <Recomended product={products} />
           </View>
-          <View style={[styles.container]}>
-            <Text style={styles.title}>Preguntas frecuentes</Text>
+          <View style={[styles.container, { marginVertical: 15}]}>
+            <Text style={[styles.title, { marginVertical: 15}]}>Preguntas frecuentes</Text>
             <PreguntasFrecuentes />
           </View>
         </View>

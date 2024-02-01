@@ -1,7 +1,7 @@
 import { View } from "react-native";
 
-import ArrowLeft from "../../../assets/svgs/arrow-left.svg";
-import ArrowRight from "../../../assets/svgs/arrow-right.svg";
+import ArrowLeft from "../../assets/svgs/arrow-left.svg";
+import ArrowRight from "../../assets/svgs/arrow-right.svg";
 export const Flechitas = ({top}) => {
   return (
     <View

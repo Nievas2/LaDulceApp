@@ -12,15 +12,10 @@ import {
 } from "react-native";
 import React, { useState, useRef } from "react";
 import { styles } from "../../styles/styleSheet";
-import ArrowLeft from "../../../assets/svgs/arrow-left.svg";
-import ArrowRight from "../../../assets/svgs/arrow-right.svg";
 export const Recomended = ({ product }) => {
-  const scrollX = useRef(new Animated.Value(0)).current;
   const { width } = useWindowDimensions();
   return (
     <View style={{ flex: 1, alignItems: "center" }}>
-      
-
       <FlatList
         data={product}
         renderItem={({ item }) => <RecomendedItem item={item} />}
@@ -30,15 +25,8 @@ export const Recomended = ({ product }) => {
           paddingBottom: 10,
         }}
         persistentScrollbar={true}
-        pagingEnabled
-        bounces={false}
+       /*  pagingEnabled */
         keyExtractor={(item) => item.id}
-        onScroll={Animated.event(
-          [{ nativeEvent: { contentOffset: { x: scrollX } } }],
-          {
-            useNativeDriver: false,
-          }
-        )}
       />
     </View>
   );
@@ -46,7 +34,7 @@ export const Recomended = ({ product }) => {
 export const RecomendedItem = ({ item }) => {
   const { width } = useWindowDimensions();
   return (
-    <View style={[styles.container, { width }]} key={item.id}>
+    <View style={[styles.container, { width  }]} key={item.id}>
       <View style={{ flex: 1 }}>
         <Image
           source={{ uri: item.image }}
@@ -55,6 +43,26 @@ export const RecomendedItem = ({ item }) => {
               justifyContent: "center",
               width: 250,
               height: 250,
+            },
+          ]}
+        />
+      </View>
+    </View>
+  );
+};
+
+export const HomeCarrusel = ({ item }) => {
+  const { width } = useWindowDimensions();
+  return (
+    <View style={[styles.container, { width }, { height: 150 }]}>
+      <View>
+        <Image
+          source={item.image}
+          style={[
+            {
+              flex: 1,
+              justifyContent: "center",
+              width: 500,
             },
           ]}
         />
@@ -84,22 +92,3 @@ export function seleccionarTresProductosUnicos({ product, id }) {
 
   return seleccionados;
 }
-export const HomeCarrusel = ({ item }) => {
-  const { width } = useWindowDimensions();
-  return (
-    <View style={[styles.container, { width }, { height: 150 }]}>
-      <View>
-        <Image
-          source={item.image}
-          style={[
-            {
-              flex: 1,
-              justifyContent: "center",
-              width: 500,
-            },
-          ]}
-        />
-      </View>
-    </View>
-  );
-};

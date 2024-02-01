@@ -12,12 +12,13 @@ import {
 } from "react-native";
 import { styles } from "../../styles/styleSheet";
 import { useState } from "react";
+import { Pregunta } from "./preguntas";
 export const PreguntasFrecuentes = () => {
   const preguntas = [
     {
       title: "COMO COMPRAR",
       description:
-        '1. Navega por nuestra web y mira todas las opciones que tenemos <br /> 2. Elegi los productos que quieras y sumalos al carrito <br />3. En cada producto podes elegir categorias y cantidades <br />4. Una vez hecho el carrito, "continuar compra", confirmar el tickety se mandara el detalle a nuestro email <br />5. Nos estaremos comunicando para confirmar fecha y disponibilidad (tambien podes escribirnos primero para ver si tenemos lugar) <br />6. Una vez cerrado los detalles, se realiza el deposito de la seña<br />7. En el dia y horario pactado entregamos tu pedido.',
+        '1. Navega por nuestra web y mira todas las opciones que tenemos <br> 2. Elegi los productos que quieras y sumalos al carrito <br>3. En cada producto podes elegir categorias y cantidades <br>4. Una vez hecho el carrito, "continuar compra", confirmar el tickety se mandara el detalle a nuestro email <br>5. Nos estaremos comunicando para confirmar fecha y disponibilidad (tambien podes escribirnos primero para ver si tenemos lugar) <br>6. Una vez cerrado los detalles, se realiza el deposito de la seña<br>7. En el dia y horario pactado entregamos tu pedido.',
       active: true,
       id: 555,
     },
@@ -38,21 +39,21 @@ export const PreguntasFrecuentes = () => {
     {
       title: "¿HAY QUE SEÑAR LOS PEDIDOS?",
       description:
-        "Si, se pide una seña para confirmar el pedido. <br />Una vez señado, el precio final se congela. <br />Los valores actuales se mantienen por 15 dias. <br />No tomamos pedidos con mas de un mes de anticipacion.",
+        "Si, se pide una seña para confirmar el pedido. <br>Una vez señado, el precio final se congela. <br>Los valores actuales se mantienen por 15 dias. <br>No tomamos pedidos con mas de un mes de anticipacion.",
       active: false,
       id: 558,
     },
     {
       title: "¿RELIZAN ENVIOS?",
       description:
-        "Si, realizamos entregas a domicilio con costo adicional, si nospasan su ubicacion aproximada, les cotizamos el envio.<br />Tambien se pueden retirar los pedidos por nuestro domicilio. <br />(villa astolfi, pilar)",
+        "Si, realizamos entregas a domicilio con costo adicional, si nospasan su ubicacion aproximada, les cotizamos el envio.<br>Tambien se pueden retirar los pedidos por nuestro domicilio. <br>(villa astolfi, pilar)",
       active: false,
       id: 559,
     },
     {
       title: "¿REALIZAN PRODUCTOS SIN TACC, VEGANOS O VEGETARIANOS?",
       description:
-        "Productos veganos y vegetarianos de lunch si es posible, se puedenadaptar a las necesidades o gustos del cliente.<br />Pasteleria vegana no realizamos por el momento. <br />Sin Tacc NO REALIZAMOS por motivos de contaminacion cruzada, nocontamos con el lugar adecuado para ese tipo de productos.",
+        "Productos veganos y vegetarianos de lunch si es posible, se puedenadaptar a las necesidades o gustos del cliente.<br>Pasteleria vegana no realizamos por el momento. <br>Sin Tacc NO REALIZAMOS por motivos de contaminacion cruzada, nocontamos con el lugar adecuado para ese tipo de productos.",
       active: false,
       id: 560,
     },
@@ -62,15 +63,11 @@ export const PreguntasFrecuentes = () => {
     let cambio = pregunta.description.replace(/<br>/g, "\n");
     pregunta.description = cambio;
   });
+
   return (
     <>
       {preguntas.map((item) => (
-        <View key={item.id} style={styles.container}>
-          <TouchableOpacity>
-            <Text>{item.title}</Text>
-          </TouchableOpacity>
-          {item.active ? <Text>{item.description}</Text> : <Text></Text>}
-        </View>
+        <Pregunta item={item} key={item.id}></Pregunta>
       ))}
     </>
   );

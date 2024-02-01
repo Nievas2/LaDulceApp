@@ -4,10 +4,10 @@
     "slug": "ladulce",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/flor.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/logo.webp",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -25,7 +25,7 @@
       "package": "com.nievas02.ladulce"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/flor.png"
     },
     "extra": {
       "eas": {

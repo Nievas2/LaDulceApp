@@ -15,15 +15,16 @@ import {
   import { useParams } from "react-router-native";
   import { Link } from "react-router-native";
   import products from "../../mook/products.json";
-import { Flechitas } from "../utils/flechitas";
+import { Flechitas } from "../../utils/flechitas";
   export const ItemsCarousel = ({ item }) => {
     const { width } = useWindowDimensions();
     return (
-      <View style={[styles.container, { width }]}>
+      <View style={[styles.debugger,styles.container, { width }]}>
         <View >
           <Image
             source={{ uri: item.ImageProduct.image }}
             style={[
+              
               {
                
                 justifyContent: "center",
@@ -39,7 +40,8 @@ import { Flechitas } from "../utils/flechitas";
   export const Carrusel = () => {
     let { id } = useParams();
     let product = {};
-    const scrollX = useRef(new Animated.Value(0)).current;
+    const scrollX = useRef(new Animated.Value(0)).current; 
+    console.log(scrollX)
     const { width } = useWindowDimensions();
     products.find((element) => {
       if (element.id == id) product = element;
@@ -53,14 +55,16 @@ import { Flechitas } from "../utils/flechitas";
           horizontal
           showsHorizontalScrollIndicator
           contentContainerStyle={{
+            margin: 0,
             paddingBottom: 10,
+
           }}
           persistentScrollbar={true}
           pagingEnabled
           bounces={false}
           keyExtractor={(item) => item.id}
           onScroll={Animated.event(
-            [{ nativeEvent: { contentOffset: { x: scrollX } } }],
+            [{ nativeEvent: { contentOffset: { x: scrollX  } } }],
             {
               useNativeDriver: false,
             }

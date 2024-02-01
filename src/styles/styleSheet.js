@@ -10,12 +10,12 @@ export const styles = StyleSheet.create({
   },
   navbar: {
     marginTop: Constants.statusBarHeight,
-    flex: 1,
+    flex: 6,
     flexDirection: "row",
     gap: 15,
     backgroundColor: "#fbe4dd",
     alignItems: "center",
-    color: "#564", borderColor: "#f00", fontSize: 50, minHeight: 50,
+    color: "#564", borderColor: "#f00", fontSize: 50, minHeight: 100,
     alignContent: "center",
     alignSelf: "center",
   },
@@ -60,6 +60,20 @@ export const styles = StyleSheet.create({
     fontSize: 15,
     flex: 1
   },
+  textWhite:{
+    color: "#fff"
+  },
+  textCenter:{
+    alignSelf: "center"
+  },
+  viewCenter:{
+    alignItems:"center"
+  },
+  hr:{
+    height: 50,
+    backgroundColor: "#000",
+    width: 50
+  },
   itemCategory:{
     /* height: 50,
     width: 50,
@@ -72,8 +86,18 @@ export const styles = StyleSheet.create({
     margin: 0,
     marginBottom: 10,
   },
+  questions:{
+    backgroundColor: "#ffe",
+    width: "100%",
+    padding: 15
+  },
   debugger:{
     borderWidth: 10,
     borderColor:"#f00"
-  }
+  },
+  lineStyle:{
+    borderWidth: 0.5,
+    borderColor:'black',
+    margin:10,
+}
 });

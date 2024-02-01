@@ -17,7 +17,7 @@ import { Link } from "react-router-native";
 import products from "../../mook/products.json";
 import { Recomended, seleccionarTresProductosUnicos } from "./recomended";
 import { Carrusel } from "./carrusel";
-import { Flechitas } from "../utils/flechitas";
+import { Flechitas } from "../../utils/flechitas";
 export const DescriptionProduct = () => {
   let { id } = useParams();
   let product = {};

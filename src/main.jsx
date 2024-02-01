@@ -4,8 +4,11 @@ import { DescriptionProduct } from "./components/pags-secundarias/descriptionPro
 import { styles } from "./styles/styleSheet";
 import { View, Text } from "react-native";
 import { Switch, Routes, Route } from "react-router-native";
-import { Carrito } from "./components/carrito.jsx";
+import { Carrito } from "./components/compras/carrito.jsx";
 import { Home } from "./components/home-page/home.jsx";
+import { Contacto } from "./components/contacto.jsx";
+import { Registro } from "./components/login-register/register.jsx";
+import { Login } from "./components/login-register/login.jsx";
 export const Main = () => {
   return (
     <View style={styles.container}>
@@ -13,7 +16,10 @@ export const Main = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/contacto" element={<Contacto />} />
           <Route path="/carrito" element={<Carrito />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/registro" element={<Registro />} />
           <Route path="/productos" element={<Products />} />
           <Route path="/producto/:id" element={<DescriptionProduct />} />
         </Routes>
