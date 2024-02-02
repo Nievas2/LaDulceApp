@@ -9,6 +9,8 @@ import { Home } from "./components/home-page/home.jsx";
 import { Contacto } from "./components/contacto.jsx";
 import { Registro } from "./components/login-register/register.jsx";
 import { Login } from "./components/login-register/login.jsx";
+import { RecuperarContraseña } from "./components/login-register/password.jsx";
+import { NewCode } from "./components/login-register/code.jsx";
 export const Main = () => {
   return (
     <View style={styles.container}>
@@ -20,6 +22,8 @@ export const Main = () => {
           <Route path="/carrito" element={<Carrito />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registro" element={<Registro />} />
+          <Route path="/recuperar-contraseña" element={<RecuperarContraseña />} />
+          <Route path="/nuevo-codigo" element={<NewCode />} />
           <Route path="/productos" element={<Products />} />
           <Route path="/producto/:id" element={<DescriptionProduct />} />
         </Routes>

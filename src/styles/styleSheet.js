@@ -6,79 +6,82 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fbe4dd",
     alignItems: "center",
-    borderRadius: 15
+    borderRadius: 15,
   },
   navbar: {
     marginTop: Constants.statusBarHeight,
     flex: 6,
     flexDirection: "row",
-    gap: 15,
+    gap: 10,
     backgroundColor: "#fbe4dd",
     alignItems: "center",
-    color: "#564", borderColor: "#f00", fontSize: 50, minHeight: 100,
+    color: "#564",
+    borderColor: "#f00",
+    fontSize: 50,
+    minHeight: 100,
     alignContent: "center",
     alignSelf: "center",
+  },
+  navbarItem:{
+    backgroundColor: "#88f",
+    padding:15
   },
   card: {
     flex: 1,
     elevation: 5,
     backgroundColor: "#eee",
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 20 },
     shadowOpacity: 0.3,
     shadowRadius: 2,
-    gap: 10 ,
+    gap: 10,
     padding: 15,
     margin: 15,
     minWidth: 350,
-    borderRadius: 15
+    borderRadius: 15,
   },
-  image:{
+  image: {
     height: 200,
-    width:200, 
+    width: 200,
     alignSelf: "center",
   },
-  imageProduct:{
-    flex: 0.7, 
+  imageProduct: {
+    flex: 0.7,
     justifyContent: "center",
   },
-  bold:{
+  bold: {
     fontWeight: "bold",
-    fontSize: 15
+    fontSize: 15,
   },
-  title:{
+  title: {
     fontSize: 20,
     fontWeight: "bold",
-    textAlign: "center"
+    textAlign: "center",
   },
-  subTitle:{
+  subTitle: {
     fontSize: 18,
-    fontWeight:"bold",
-    marginBottom: 15
+    fontWeight: "bold",
+    marginBottom: 15,
   },
-  texts:{
+  texts: {
     fontSize: 15,
-    flex: 1
+    flex: 1,
   },
-  textWhite:{
-    color: "#fff"
+  textWhite: {
+    color: "#fff",
   },
-  textCenter:{
-    alignSelf: "center"
+  textCenter: {
+    alignSelf: "center",
   },
-  viewCenter:{
-    alignItems:"center"
+  viewCenter: {
+    alignItems: "center",
   },
-  hr:{
+  hr: {
     height: 50,
     backgroundColor: "#000",
-    width: 50
-  },
-  itemCategory:{
-    /* height: 50,
     width: 50,
-    borderRadius: 100,
-    resizeMode: "cover" */
+  },
+  itemCategory: {
     width: 100,
     height: 100,
     resizeMode: "cover",
@@ -86,18 +89,18 @@ export const styles = StyleSheet.create({
     margin: 0,
     marginBottom: 10,
   },
-  questions:{
+  questions: {
     backgroundColor: "#ffe",
     width: "100%",
-    padding: 15
+    padding: 15,
   },
-  debugger:{
+  debugger: {
     borderWidth: 10,
-    borderColor:"#f00"
+    borderColor: "#f00",
   },
-  lineStyle:{
+  lineStyle: {
     borderWidth: 0.5,
-    borderColor:'black',
-    margin:10,
-}
+    borderColor: "black",
+    margin: 10,
+  },
 });

@@ -6,11 +6,16 @@ import {
   TouchableOpacity,
   ScrollView,
   useWindowDimensions,
+  Button,
 } from "react-native";
 import { styles } from "../styles/styleSheet";
 import Instragram from "../../assets/svgs/instagram.svg";
 import WhatsApp from "../../assets/svgs/whatsapp.svg";
 import Ubication from "../../assets/svgs/ubication.svg";
+import { Formik } from "formik";
+import { TextInputFormik, TextInputFormikContact } from "../utils/inputs";
+import { ContactValidation } from "./validations/validations";
+
 export const Contacto = () => {
   const { width } = useWindowDimensions();
   const abrirInstagram = () => {
@@ -29,6 +34,8 @@ export const Contacto = () => {
     "¡Hola! <br>¿Estas buscando hacer un evento en especial?<br>¿O tenes alguna otra consulta?<br><br>Por ejemplo con el tipo de comida que buscabas, fecha y cantidad de invitados.<br><br>Dejanos tu duda a la brevedad te estaremos respondiendo!<br><br>¡Saludos, Flor & Lucas!";
   const cambio = message.replace(/<br>/g, "\n");
   message = cambio;
+
+  const initialValues = { contacto: "" };
   return (
     <View>
       <ScrollView
@@ -86,8 +93,22 @@ export const Contacto = () => {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={{ marginTop: 15, marginBottom: 200 }}>
+        <View style={{ marginTop: 15, marginBottom: 400 }}>
           <Text style={{ fontSize: 22 }}>{message}</Text>
+          <Formik
+            validationSchema={ContactValidation}
+            initialValues={initialValues}
+            onSubmit={(values) => console.log(values)}
+          >
+            {({ handleSubmit }) => {
+              return (
+                <View style={{ padding: 15, margin: 15 }}>
+                  <TextInputFormikContact name="contacto" placeholder="Contactanos" />
+                  <Button onPress={handleSubmit} title="Enviar" />
+                </View>
+              );
+            }}
+          </Formik>
         </View>
       </ScrollView>
     </View>
