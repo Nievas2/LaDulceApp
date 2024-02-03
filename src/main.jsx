@@ -17,7 +17,7 @@ export const Main = () => {
       <View>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Products />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/carrito" element={<Carrito />} />
           <Route path="/login" element={<Login />} />

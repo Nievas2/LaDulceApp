@@ -94,7 +94,7 @@ export const Contacto = () => {
           </View>
         </View>
         <View style={{ marginTop: 15, marginBottom: 400 }}>
-          <Text style={{ fontSize: 22 }}>{message}</Text>
+          <Text style={[{ fontSize: 22 }, styles.textWhite]}>{message}</Text>
           <Formik
             validationSchema={ContactValidation}
             initialValues={initialValues}
