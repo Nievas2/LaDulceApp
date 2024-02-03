@@ -4,18 +4,32 @@ import {
   Text,
   View,
   useWindowDimensions,
+
 } from "react-native";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 import { Link } from "react-router-native";
 import { styles } from "../../styles/styleSheet";
 import { TextInputFormik } from "../../utils/inputs";
 import { loginValidation } from "../validations/validations";
 import { Formik } from "formik";
+import { login } from "../../services/users";
 
 export const Login = () => {
   const { width } = useWindowDimensions();
-  initialValues={
-    email:"",
-    password:""
+  initialValues = {
+    email: "",
+    password: "",
+  };
+  async function loginUser({ values }) {
+    const response = await login({ values });
+/*     const token = response.headers.get("authorization"); */
+    if(response != null && response != undefined){
+      AsyncStorage.setItem("token", response.token)
+      console.log("fuera", response);
+    }
+  
+    
   }
   return (
     <View>
@@ -40,7 +54,7 @@ export const Login = () => {
           <Formik
             validationSchema={loginValidation}
             initialValues={initialValues}
-            onSubmit={(values) => console.log(values)}
+            onSubmit={(values) => loginUser({ values })}
           >
             {({ handleSubmit }) => {
               return (

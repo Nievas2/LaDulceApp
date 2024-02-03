@@ -10,12 +10,13 @@ import {
   ScrollView,
   Animated,
 } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   HomeCarrusel,
   Recomended,
   RecomendedItem,
 } from "../pags-secundarias/recomended";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Products from "../../mook/products.json";
 import { styles } from "../../styles/styleSheet";
 import { PreguntasFrecuentes } from "./preguntas-frecuentes";
@@ -28,6 +29,13 @@ export const Home = () => {
   ];
   const { width } = useWindowDimensions();
   const products = Products.slice(-3);
+  async function getToken() {
+    const token = await AsyncStorage.getItem("token");
+  }
+  useEffect(() => {
+    getToken();
+  }, []);
+
   return (
     <View style={{ padding: 15 }}>
       <ScrollView>
@@ -38,7 +46,6 @@ export const Home = () => {
                 alignItems: "center",
               }}
             >
-              
               <FlatList
                 data={images}
                 renderItem={({ item }) => <HomeCarrusel item={item} />}
@@ -53,13 +60,15 @@ export const Home = () => {
               />
             </View>
           </View>
-          <View style={[styles.container, {marginTop: 15}]}>
+          <View style={[styles.container, { marginTop: 15 }]}>
             <Text style={styles.title}>Productos destacados</Text>
-            <Flechitas top={120}/>
+            <Flechitas top={120} />
             <Recomended product={products} />
           </View>
-          <View style={[styles.container, { marginVertical: 15}]}>
-            <Text style={[styles.title, { marginVertical: 15}]}>Preguntas frecuentes</Text>
+          <View style={[styles.container, { marginVertical: 15 }]}>
+            <Text style={[styles.title, { marginVertical: 15 }]}>
+              Preguntas frecuentes
+            </Text>
             <PreguntasFrecuentes />
           </View>
         </View>

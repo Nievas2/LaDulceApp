@@ -1,27 +1,15 @@
 import { View, Text, Image, FlatList } from "react-native";
-/* import products from "../../mook/products.json";
- */ import { ObtencionPoductos } from "../../services/products";
+import products from '../../mook/products.json'
 import categories from "../../mook/categories.json";
 import { styles } from "../../styles/styleSheet";
 import { Link } from "react-router-native";
 import { Card } from "./card";
 import { ItemCategories } from "./itemCategories";
 import { useEffect, useState } from "react";
+import { ProductsList } from "../../services/products";
+
 
 export const Products = () => {
-  const [products, setProducts] = useState(null);
-  const lsaldjkf = async() => {
-    const respuesta = await ObtencionPoductos();
-    return respuesta
-  };
-  let hasProducts
-  useEffect(() => {
-    const respuesta = lsaldjkf();
-    hasProducts = respuesta?.length > 0;
-    
-    setProducts(respuesta);
-  }, []);
-
   return (
     <View>
       <View>
@@ -49,6 +37,7 @@ export const Products = () => {
               gap: 5,
             }}
           ></FlatList>
+          {/* <ProductsList></ProductsList> */}
         </View>
       </View>
     </View>
