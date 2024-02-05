@@ -98,8 +98,8 @@ export const Login = () => {
             </View>
 
             <View>
-              <Link to={"/recuperar-contraseña"} underlayColor="transparent">
-                <Text style={{ fontSize: 18 }}>Recuperar contraseña</Text>
+              <Link to={"/nueva-contraseña"} underlayColor="transparent">
+                <Text style={{ fontSize: 18 }}>Nueva contraseña</Text> 
               </Link>
               <Link to={"/registro"} underlayColor="transparent">
                 <Text style={{ fontSize: 18 }}>Registro</Text>

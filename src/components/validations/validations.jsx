@@ -18,6 +18,11 @@ export const RegisterValidation = yup.object().shape({
 export const recuperarContraseñaValidation = yup.object().shape({
     email:yup.string().required().email()
 })
+export const nuevaContraseñaValidation = yup.object().shape({
+    email:yup.string().required().email(),
+    code:yup.number().required(),
+    password:yup.string().required().min(6, "La contraseña debe de tener minimo 6 caracteres"),
+})
 export const NuevoCodigoValidation = yup.object().shape({
     email:yup.string().required().email()
 })

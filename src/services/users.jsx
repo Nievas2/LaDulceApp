@@ -12,17 +12,17 @@ export async function login({ values }) {
   const valores = await response.json();
   return valores;
 }
-export async function recuperarContraseña({ email }) {
+export async function nuevaContraseña({ values }) {
 
   const response = await fetch(
-    "https://back-ladulcetradicion.fly.dev/user/passwordrecovery",
+    `https://back-ladulcetradicion.fly.dev/user/newpassword/${values.code}/${values.email}`,
     {
-      method: "POST",
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        email: email,
+        password: values.password,
       }),
     }
   );
