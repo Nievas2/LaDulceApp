@@ -19,7 +19,7 @@ import { Flechitas } from "../../utils/flechitas";
   export const ItemsCarousel = ({ item }) => {
     const { width } = useWindowDimensions();
     return (
-      <View style={[styles.debugger,styles.container, { width }]}>
+      <View style={[styles.container, { width }]}>
         <View >
           <Image
             source={{ uri: item.ImageProduct.image }}

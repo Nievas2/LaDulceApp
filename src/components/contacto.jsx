@@ -15,9 +15,12 @@ import Ubication from "../../assets/svgs/ubication.svg";
 import { Formik } from "formik";
 import { TextInputFormik, TextInputFormikContact } from "../utils/inputs";
 import { ContactValidation } from "./validations/validations";
+import { useContext } from "react";
+import { UserToken } from "../utils/contexts";
 
 export const Contacto = () => {
   const { width } = useWindowDimensions();
+  const { token, setToken } = useContext(UserToken);
   const abrirInstagram = () => {
     const url = "https://www.instagram.com/ladulcetradicionpilar";
     Linking.openURL(url);
@@ -94,21 +97,32 @@ export const Contacto = () => {
           </View>
         </View>
         <View style={{ marginTop: 15, marginBottom: 400 }}>
-          <Text style={[{ fontSize: 22 }, styles.textWhite]}>{message}</Text>
-          <Formik
-            validationSchema={ContactValidation}
-            initialValues={initialValues}
-            onSubmit={(values) => console.log(values)}
-          >
-            {({ handleSubmit }) => {
-              return (
-                <View style={{ padding: 15, margin: 15 }}>
-                  <TextInputFormikContact name="contacto" placeholder="Contactanos" />
-                  <Button onPress={handleSubmit} title="Enviar" />
-                </View>
-              );
-            }}
-          </Formik>
+          {token ? (
+            <View>
+              <Text style={[{ fontSize: 22 }, styles.textWhite]}>
+                {message}
+              </Text>
+              <Formik
+                validationSchema={ContactValidation}
+                initialValues={initialValues}
+                onSubmit={(values) => console.log(values)}
+              >
+                {({ handleSubmit }) => {
+                  return (
+                    <View style={{ padding: 15, margin: 15 }}>
+                      <TextInputFormikContact
+                        name="contacto"
+                        placeholder="Contactanos"
+                      />
+                      <Button onPress={handleSubmit} title="Enviar" />
+                    </View>
+                  );
+                }}
+              </Formik>
+            </View>
+          ) : (
+            <Text>Es necesario estar logueado</Text>
+          )}
         </View>
       </ScrollView>
     </View>

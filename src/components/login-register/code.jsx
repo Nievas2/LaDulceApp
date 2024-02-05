@@ -2,11 +2,17 @@ import { Formik } from "formik";
 import { Button, ScrollView, Text, View, useWindowDimensions } from "react-native";
 import { NuevoCodigoValidation } from "../validations/validations";
 import { TextInputFormik } from "../../utils/inputs";
+import { nuevoCodigo } from "../../services/users";
 
 export const NewCode = () => {
   const initialValues = {
     email: "",
   };
+
+  async function crearCodigo({values}) {
+    const response = await nuevoCodigo({ email: values.email})
+    console.log(response)
+  }
   const {width} = useWindowDimensions()
   return (
     <View>
@@ -22,7 +28,7 @@ export const NewCode = () => {
         <Formik
           validationSchema={NuevoCodigoValidation}
           initialValues={initialValues}
-          onSubmit={(values) => console.log(values)}
+          onSubmit={(values) => crearCodigo({values})}
         >
           {({ handleSubmit }) => {
             return (

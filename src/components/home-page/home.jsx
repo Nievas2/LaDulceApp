@@ -16,49 +16,47 @@ import {
   Recomended,
   RecomendedItem,
 } from "../pags-secundarias/recomended";
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import Products from "../../mook/products.json";
 import { styles } from "../../styles/styleSheet";
 import { PreguntasFrecuentes } from "./preguntas-frecuentes";
 import { Flechitas } from "../../utils/flechitas";
+import { UserToken } from "../../utils/contexts";
 export const Home = () => {
+  const { token, setToken } = useContext(UserToken);
   const images = [
-    { image: require("../../../assets/carrusel/1.webp"), id: 800 },
-    { image: require("../../../assets/carrusel/2.webp"), id: 801 },
-    { image: require("../../../assets/carrusel/3.webp"), id: 802 },
+    { image: require("../../../assets/banners/1.webp"), id: 800 },
+    { image: require("../../../assets/banners/2.webp"), id: 801 },
+    { image: require("../../../assets/banners/3.webp"), id: 802 },
   ];
   const { width } = useWindowDimensions();
   const products = Products.slice(-3);
   async function getToken() {
-    const token = await AsyncStorage.getItem("token");
+    const tokenStorage = await AsyncStorage.getItem("token");
+    if (tokenStorage) {
+      setToken(tokenStorage);
+    }
   }
   useEffect(() => {
     getToken();
   }, []);
-
   return (
-    <View style={{ padding: 15 }}>
+    <View style={{}}>
       <ScrollView>
-        <View style={{ flex: 1, marginBottom: 200 }}>
-          <View style={{ flex: 1 }}>
-            <View
-              style={{
-                alignItems: "center",
+        <View style={{ marginBottom: 200 }}>
+          <View style={{ flex: 1, alignItems: "center" }}>
+            <FlatList
+              data={images}
+              renderItem={({ item }) => <HomeCarrusel item={item} />}
+              horizontal
+              showsHorizontalScrollIndicator
+              contentContainerStyle={{
+                paddingBottom: 10,
               }}
-            >
-              <FlatList
-                data={images}
-                renderItem={({ item }) => <HomeCarrusel item={item} />}
-                horizontal
-                showsHorizontalScrollIndicator
-                contentContainerStyle={{
-                  paddingBottom: 10,
-                }}
-                persistentScrollbar={true}
-                pagingEnabled
-                keyExtractor={(item) => item.id}
-              />
-            </View>
+              persistentScrollbar={true}
+              pagingEnabled
+              keyExtractor={(item) => item.id}
+            />
           </View>
           <View style={[styles.container, { marginTop: 15 }]}>
             <Text style={styles.title}>Productos destacados</Text>

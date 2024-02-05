@@ -25,7 +25,7 @@ export const Recomended = ({ product }) => {
           paddingBottom: 10,
         }}
         persistentScrollbar={true}
-       /*  pagingEnabled */
+        pagingEnabled
         keyExtractor={(item) => item.id}
       />
     </View>
@@ -34,7 +34,7 @@ export const Recomended = ({ product }) => {
 export const RecomendedItem = ({ item }) => {
   const { width } = useWindowDimensions();
   return (
-    <View style={[styles.container, { width  }]} key={item.id}>
+    <View style={[styles.container, { width }]} key={item.id}>
       <View style={{ flex: 1 }}>
         <Image
           source={{ uri: item.image }}
@@ -54,15 +54,15 @@ export const RecomendedItem = ({ item }) => {
 export const HomeCarrusel = ({ item }) => {
   const { width } = useWindowDimensions();
   return (
-    <View style={[styles.container, { width }, { height: 150 }]}>
+    <View style={[styles.container, { width }]} key={item.id}>
       <View>
         <Image
           source={item.image}
           style={[
             {
-              flex: 1,
               justifyContent: "center",
-              width: 500,
+              width: 400,
+              height: 250,
             },
           ]}
         />

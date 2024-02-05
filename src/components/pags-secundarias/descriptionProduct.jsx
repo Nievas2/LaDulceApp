@@ -28,14 +28,14 @@ export const DescriptionProduct = () => {
   return (
     <View
       style={{
-        margin: 5,
+        
         backgroundColor: "#fbe4dd",
         borderRadius: 15,
       }}
     >
       <ScrollView>
         <View style={{ flex: 1, marginBottom: 200 }}>
-          <View style={{ flex: 1 }}>
+          <View style={{ flex: 1, marginTop: 10 }}>
             <Flechitas top={90}/>
             <Carrusel />
           </View>

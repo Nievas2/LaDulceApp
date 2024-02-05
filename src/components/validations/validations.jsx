@@ -21,3 +21,7 @@ export const recuperarContraseñaValidation = yup.object().shape({
 export const NuevoCodigoValidation = yup.object().shape({
     email:yup.string().required().email()
 })
+export const validationsCode = yup.object().shape({
+    email:yup.string().required().email(),
+    code: yup.number("El codigo son solo numeros").required()
+})
