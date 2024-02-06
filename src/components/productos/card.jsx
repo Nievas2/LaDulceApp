@@ -1,7 +1,10 @@
 import { View, Text, Image, TouchableOpacity, Button } from "react-native";
 import { styles } from "../../styles/styleSheet";
 import { Link } from "react-router-native";
+import { useEffect } from "react";
+import { getDollar } from "../../services/dollar";
 export const Card = ({ product }) => {
+
   return (
     <View style={styles.card}>
       <TouchableOpacity>

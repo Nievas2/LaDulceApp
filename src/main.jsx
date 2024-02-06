@@ -10,26 +10,28 @@ import { Contacto } from "./components/contacto.jsx";
 import { Registro } from "./components/login-register/register.jsx";
 import { Login } from "./components/login-register/login.jsx";
 import { NewCode } from "./components/login-register/code.jsx";
-import { TokenProvider } from "./utils/contexts.jsx";
+import { TokenProvider,CarritoProvider } from "./utils/contexts.jsx";
 import { VerificacionCode } from "./components/login-register/verifyCode.jsx";
 import { Newpassword } from "./components/login-register/new-password.jsx";
 export const Main = () => {
   return (
     <View style={styles.container}>
       <TokenProvider>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contacto" element={<Contacto />} />
-          <Route path="/carrito" element={<Carrito />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/registro" element={<Registro />} />
-          <Route path="/validar-codigo" element={<VerificacionCode />} />
-          <Route path="/nuevo-codigo" element={<NewCode />} />
-          <Route path="/nueva-contraseña" element={<Newpassword />} />
-          <Route path="/productos" element={<Products />} />
-          <Route path="/producto/:id" element={<DescriptionProduct />} />
-        </Routes>
+        <CarritoProvider>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/carrito" element={<Carrito />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/registro" element={<Registro />} />
+            <Route path="/validar-codigo" element={<VerificacionCode />} />
+            <Route path="/nuevo-codigo" element={<NewCode />} />
+            <Route path="/nueva-contraseña" element={<Newpassword />} />
+            <Route path="/productos" element={<Products />} />
+            <Route path="/producto/:id" element={<DescriptionProduct />} />
+          </Routes>
+        </CarritoProvider>
       </TokenProvider>
     </View>
   );

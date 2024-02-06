@@ -15,3 +15,18 @@ export function TokenProvider({ children }) {
     </UserToken.Provider>
   );
 }
+export const Carrito = createContext();
+
+export function CarritoProvider({ children }) {
+  const [token, setToken] = useState([]);
+  return (
+    <Carrito.Provider
+      value={{
+        token,
+        setToken,
+      }}
+    >
+      {children}
+    </Carrito.Provider>
+  );
+}

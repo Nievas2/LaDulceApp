@@ -15,12 +15,15 @@ import Ubication from "../../assets/svgs/ubication.svg";
 import { Formik } from "formik";
 import { TextInputFormik, TextInputFormikContact } from "../utils/inputs";
 import { ContactValidation } from "./validations/validations";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { UserToken } from "../utils/contexts";
+import { contact } from "../services/users";
+import { decodeJWT } from "../utils/decodeJWT";
 
 export const Contacto = () => {
   const { width } = useWindowDimensions();
   const { token, setToken } = useContext(UserToken);
+  const [finished, setFinished] = useState(false);
   const abrirInstagram = () => {
     const url = "https://www.instagram.com/ladulcetradicionpilar";
     Linking.openURL(url);
@@ -37,7 +40,17 @@ export const Contacto = () => {
     "¡Hola! <br>¿Estas buscando hacer un evento en especial?<br>¿O tenes alguna otra consulta?<br><br>Por ejemplo con el tipo de comida que buscabas, fecha y cantidad de invitados.<br><br>Dejanos tu duda a la brevedad te estaremos respondiendo!<br><br>¡Saludos, Flor & Lucas!";
   const cambio = message.replace(/<br>/g, "\n");
   message = cambio;
-
+  const emailPayload = () => {
+    const tokenDecoded = decodeJWT({ token });
+    return tokenDecoded.email;
+  };
+  async function sendEmail({ values }) {
+    const email = emailPayload();
+    const response = await contact({ values: values.contacto, email });
+    if (response) {
+      setFinished(true);
+    }
+  }
   const initialValues = { contacto: "" };
   return (
     <View>
@@ -96,34 +109,42 @@ export const Contacto = () => {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={{ marginTop: 15, marginBottom: 400 }}>
-          {token ? (
-            <View>
-              <Text style={[{ fontSize: 22 }, styles.textWhite]}>
-                {message}
+        {!finished ? (
+          <View style={{ marginTop: 15, marginBottom: 400 }}>
+            {token ? (
+              <View>
+                <Text style={[{ fontSize: 22 }, styles.textWhite]}>
+                  {message}
+                </Text>
+                <Formik
+                  validationSchema={ContactValidation}
+                  initialValues={initialValues}
+                  onSubmit={(values) => sendEmail({ values })}
+                >
+                  {({ handleSubmit }) => {
+                    return (
+                      <View style={{ padding: 15, margin: 15 }}>
+                        <TextInputFormikContact
+                          name="contacto"
+                          placeholder="Contactanos"
+                        />
+                        <Button onPress={handleSubmit} title="Enviar" />
+                      </View>
+                    );
+                  }}
+                </Formik>
+              </View>
+            ) : (
+              <Text style={styles.title}>
+                Es necesario estar logueado para enviar mensajes
               </Text>
-              <Formik
-                validationSchema={ContactValidation}
-                initialValues={initialValues}
-                onSubmit={(values) => console.log(values)}
-              >
-                {({ handleSubmit }) => {
-                  return (
-                    <View style={{ padding: 15, margin: 15 }}>
-                      <TextInputFormikContact
-                        name="contacto"
-                        placeholder="Contactanos"
-                      />
-                      <Button onPress={handleSubmit} title="Enviar" />
-                    </View>
-                  );
-                }}
-              </Formik>
-            </View>
-          ) : (
-            <Text>Es necesario estar logueado</Text>
-          )}
-        </View>
+            )}
+          </View>
+        ) : (
+          <Text style={[styles.title, styles.textWhite]}>
+            Mensaje enviado correctamente pronto recibira respuestas
+          </Text>
+        )}
       </ScrollView>
     </View>
   );

@@ -11,7 +11,6 @@ export const NewCode = () => {
 
   async function crearCodigo({values}) {
     const response = await nuevoCodigo({ email: values.email})
-    console.log(response)
   }
   const {width} = useWindowDimensions()
   return (

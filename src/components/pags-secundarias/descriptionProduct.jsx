@@ -10,7 +10,7 @@ import {
   ScrollView,
   Animated,
 } from "react-native";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { styles } from "../../styles/styleSheet";
 import { useParams } from "react-router-native";
 import { Link } from "react-router-native";
@@ -18,6 +18,7 @@ import products from "../../mook/products.json";
 import { Recomended, seleccionarTresProductosUnicos } from "./recomended";
 import { Carrusel } from "./carrusel";
 import { Flechitas } from "../../utils/flechitas";
+import { getDollar } from "../../services/dollar";
 export const DescriptionProduct = () => {
   let { id } = useParams();
   let product = {};
@@ -25,6 +26,14 @@ export const DescriptionProduct = () => {
     if (element.id == id) product = element;
   });
   const unique = seleccionarTresProductosUnicos({ product: products, id });
+  const [dollar, setDollar] = useState(0)
+  async function valorDollar (){
+    const value = await getDollar()
+    setDollar(value.price)
+  }
+  useEffect(()=>{
+    valorDollar()
+  }, [])
   return (
     <View
       style={{
@@ -50,7 +59,7 @@ export const DescriptionProduct = () => {
               <View style={{ alignSelf: "center", flex: 1 }}>
                 <Text style={styles.title}>{product.name}</Text>
                 <Text style={styles.subTitle}>
-                  Precio: ${product.price * 1000}
+                  Precio: ${product.price * dollar}
                 </Text>
                 <Text style={styles.texts}>{product.description}</Text>
               </View>

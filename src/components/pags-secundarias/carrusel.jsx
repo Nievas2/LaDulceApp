@@ -41,7 +41,6 @@ import { Flechitas } from "../../utils/flechitas";
     let { id } = useParams();
     let product = {};
     const scrollX = useRef(new Animated.Value(0)).current; 
-    console.log(scrollX)
     const { width } = useWindowDimensions();
     products.find((element) => {
       if (element.id == id) product = element;

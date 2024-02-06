@@ -12,6 +12,7 @@ import {
 } from "react-native";
 import React, { useState, useRef } from "react";
 import { styles } from "../../styles/styleSheet";
+import { Link } from "react-router-native";
 export const Recomended = ({ product }) => {
   const { width } = useWindowDimensions();
   return (
@@ -34,20 +35,27 @@ export const Recomended = ({ product }) => {
 export const RecomendedItem = ({ item }) => {
   const { width } = useWindowDimensions();
   return (
-    <View style={[styles.container, { width }]} key={item.id}>
-      <View style={{ flex: 1 }}>
-        <Image
-          source={{ uri: item.image }}
-          style={[
-            {
-              justifyContent: "center",
-              width: 250,
-              height: 250,
-            },
-          ]}
-        />
+    <Link
+      to={{
+        pathname: `/producto/${item.id}`,
+      }}
+      underlayColor="transparent"
+    >
+      <View style={[styles.container, { width }]} key={item.id}>
+        <View style={{ flex: 1 }}>
+          <Image
+            source={{ uri: item.image }}
+            style={[
+              {
+                justifyContent: "center",
+                width: 250,
+                height: 250,
+              },
+            ]}
+          />
+        </View>
       </View>
-    </View>
+    </Link>
   );
 };
 
